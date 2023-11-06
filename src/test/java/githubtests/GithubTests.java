@@ -1,3 +1,5 @@
+package githubtests;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpResponse;

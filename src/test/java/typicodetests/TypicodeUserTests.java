@@ -2,8 +2,10 @@ package typicodetests;
 
 public class TypicodeUserTests {
     /*
-    TODO Create a test that validates the status code for a known user.  Users 1 - 10 are known users
-    TODO Create a test that validates the status code for an unknown user.  Unknown users have ID's > 10
-    TODO Create a test that validates the default MIME type
+    TODO Create a TypicodeUser class in the org.example package that contains the information for a Typicode User
+    TODO Use an ObjectMapper to create a TypicodeUser object
+    TODO Write a test that verifies that user 2 has a name of Ervin and a username of Antonette
+    TODO Write a test that verifies that there are precisely 10 typicode users
      */
+
 }

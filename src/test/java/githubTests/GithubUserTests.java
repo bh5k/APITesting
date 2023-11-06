@@ -1,3 +1,5 @@
+package githubTests;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpResponse;
@@ -7,13 +9,15 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.example.GitHubUser;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GithubTests {
+public class GithubUserTests {
 
     @Test
     public void testResponseCodeWithVerifiedUser() throws IOException {
@@ -55,7 +59,7 @@ public class GithubTests {
     public void testUserBackpackTrainerIsMe() throws IOException {
         String userName = "BackpackTrainer";
         String name = "Bill Fairfield";
-        int repos = 22;
+        int repos = 46;
 
         HttpUriRequest request = new HttpGet("https://api.github.com/users/" + userName);
         HttpClient client = HttpClientBuilder.create().build();
@@ -67,7 +71,6 @@ public class GithubTests {
         String actualName = user.getName();
 
         assertEquals(name, actualName);
-        assertEquals(repos, user.getPublic_repos());
-
+        Assertions.assertEquals(repos, user.getPublic_repos());
     }
 }

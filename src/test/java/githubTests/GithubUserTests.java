@@ -57,9 +57,9 @@ public class GithubUserTests {
 
     @Test
     public void testUserBackpackTrainerIsMe() throws IOException {
-        String userName = "BackpackTrainer";
-        String name = "Bill Fairfield";
-        int repos = 46;
+        String userName = "bh5k";
+        String name = "Bryan Hansen";
+        int repos = 48;
 
         HttpUriRequest request = new HttpGet("https://api.github.com/users/" + userName);
         HttpClient client = HttpClientBuilder.create().build();
